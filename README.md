@@ -1,6 +1,6 @@
 # Frontend Mentor Projects
 
-Welcome to my Frontend Mentor projects repository! This is where I'll be collecting the challenges I complete on [Frontend Mentor](https://www.frontendmentor.io/) as I build up my HTML, CSS, and JavaScript skills.
+Welcome to my Frontend Mentor projects repository! This is where I'll be displaying the challenges I complete on [Frontend Mentor](https://www.frontendmentor.io/).
 
 ## Projects completed
 
