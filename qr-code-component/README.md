@@ -38,11 +38,6 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - Wrapping the main content in a `<main>` landmark instead of a bare `<div>` under `<body>` is a small but important semantic HTML habit.
 - Even on a "fixed" (non-responsive) layout, the card still needs a `max-width` and some outer padding so it doesn't run edge-to-edge or overflow at very small viewports (320px).
 
-### Continued development
-
-- Get more comfortable setting up responsive layouts with breakpoints for future challenges that require them.
-- Practice using CSS custom properties for color/spacing values instead of repeating literal values.
-
 ## Author
 
 - GitHub - [@TeaJosh](https://github.com/TeaJosh) 
