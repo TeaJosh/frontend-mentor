@@ -5,14 +5,20 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 ## Table of contents
 
 - [Overview](#overview)
+  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
 - [Author](#author)
 
 ## Overview
+
+### The challenge
+
+Users should be able to:
+
+- See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 
@@ -23,18 +29,24 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 ### Built with
 
 - Semantic HTML5 markup
-- CSS (Flexbox)
-- Mobile-first, fixed-width card layout
-- Google Fonts (Figtree)
+- CSS custom properties (variables)
+- Flexbox
+- CSS Grid
+- Google Fonts (Inter)
 
 ### What I learned
 
-- `<span>` is an inline element, so vertical margins (`margin-top`/`margin-bottom`) are ignored on it. My category badge's bottom margin wasn't creating any space until I switched it to `display: inline-block`.
+- The `gap` property only works on a flex or grid container, not on the items inside it. The parent controls the spacing between its children. I had `gap` on the links themselves, so the buttons touched each other. Moving `display: flex`, `flex-direction: column`, and `gap` to the parent `<nav>` fixed it.
 
-- Always double-check the exact font weights listed in the style guide rather than assuming common defaults (400/700). This challenge specified Figtree at 500 and 800, so the Google Fonts import URL needed to match:
+- Hover styles aren't enough for accessibility. Adding `:focus-visible` gives keyboard users the same visual feedback, and I paired it with a visible outline.
+
+- Storing the style guide colors in `:root` custom properties makes them easy to reuse and change in one place:
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap');
+:root {
+  --green: hsl(75, 94%, 57%);
+  --grey-800: hsl(0, 0%, 12%);
+}
 ```
 
 ## Author
