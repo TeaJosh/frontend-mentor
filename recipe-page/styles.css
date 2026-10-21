@@ -23,7 +23,7 @@ body {
   background-color: var(--stone-100);
   color: var(--stone-600);
   font-family: "Outfit", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -32,54 +32,54 @@ main {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding: 24px;
+  padding: 1.5rem;
 }
 
 .recipe-card {
   width: 100%;
-  max-width: 736px;
-  padding: 24px;
+  max-width: 46rem;
+  padding: 1.5rem;
   background-color: var(--white);
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 
 .recipe-image img {
   display: block;
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 
 .card-title {
-  margin: 32px 0 24px;
+  margin-block: 2rem 1.5rem;
   color: var(--stone-900);
   font-family: "Young Serif", serif;
-  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 1.5rem + 3vw, 3rem);
   font-weight: 400;
   line-height: 1.1;
 }
 
 .card-subtitle {
-  margin-bottom: 32px;
+  margin-block-end: 2rem;
 }
 
 .prep-card {
-  margin-bottom: 32px;
-  padding: 24px;
+  margin-block-end: 2rem;
+  padding: 1.5rem;
   background-color: var(--rose-50);
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 
 .prep-time {
-  margin-bottom: 12px;
+  margin-block-end: 0.75rem;
   color: var(--rose-800);
   font-size: 1.25rem;
   font-weight: 600;
 }
 
 .section-title {
-  margin-bottom: 20px;
+  margin-block-end: 1.25rem;
   color: var(--brown-800);
   font-family: "Young Serif", serif;
   font-size: 1.75rem;
@@ -88,15 +88,15 @@ main {
 
 ul,
 ol {
-  padding-left: 24px;
+  padding-inline-start: 1.5rem;
 }
 
 li {
-  padding-left: 16px;
+  padding-inline-start: 1rem;
 }
 
 li:not(:last-child) {
-  margin-bottom: 8px;
+  margin-block-end: 0.5rem;
 }
 
 li::marker {
@@ -112,13 +112,13 @@ li::marker {
 }
 
 hr {
-  margin: 32px 0;
+  margin-block: 2rem;
   border: none;
-  border-top: 1px solid var(--stone-150);
+  border-block-start: 1px solid var(--stone-150);
 }
 
 .nutrition-description {
-  margin-bottom: 16px;
+  margin-block-end: 1rem;
 }
 
 .nutrition-table {
@@ -128,9 +128,10 @@ hr {
 
 .nutrition-table th,
 .nutrition-table td {
-  padding: 12px 0 12px 32px;
-  text-align: left;
-  border-bottom: 1px solid var(--stone-150);
+  padding-block: 0.75rem;
+  padding-inline: 2rem 0;
+  text-align: start;
+  border-block-end: 1px solid var(--stone-150);
 }
 
 .nutrition-table th {
@@ -139,31 +140,27 @@ hr {
 }
 
 .nutrition-table td {
-  padding-left: 8px;
+  padding-inline-start: 0.5rem;
   color: var(--brown-800);
   font-weight: 700;
 }
 
 .nutrition-table tr:last-child th,
 .nutrition-table tr:last-child td {
-  border-bottom: none;
+  border-block-end: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   .recipe-card {
-    padding: 40px;
-    border-radius: 24px;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
   }
 
   .recipe-image img {
-    height: 300px;
-  }
-
-  .card-title {
-    font-size: 3rem;
+    height: 18.75rem;
   }
 
   .prep-card {
-    padding: 28px;
+    padding: 1.75rem;
   }
 }
